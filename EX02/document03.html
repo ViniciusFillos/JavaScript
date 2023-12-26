@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 2em Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var name = window.prompt("What's your name? ") // to keep a string
+        document.write(`<br>Hi <strong>${name}</strong> `) // to write the bold string
+        document.write(`<br>Your name has ${name.length} letters`) // to write the string's length 
+        document.write(`<br>In Uppercase is ${name.toUpperCase()} `) // to write the string in uppercase
+        document.write(`<br>In Lowercase is ${name.toLowerCase()} `) // to write the string in lowercase
+
+        var real = 123.456 // float variable
+        document.write(`<br> Using the command toFixed we can format numbers like ${real.toFixed(2)} or ${real.toFixed(5)}`)
+        document.write(`<br> We also can replace dots for commas with .toFixed().replace(".",",") like ${real.toFixed(4).replace(".",",")} `)
+        document.write(`<br>To show a value as a currency we can use .toLocaleString('pt-BR', {style: 'currency, currency: 'BRL''}) like ${real.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} or ${real.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})} or ${real.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}`);
+    </script>
+</body>
+</html>
