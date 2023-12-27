@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo o DOM</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">DOM Document Object Model</h1>
+    <p class="segundo">The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+    <p name="nome">The <strong><abbr title="Document Object Model">DOM</abbr></strong> is the data representation of the objects that comprise the structure and content of a document on the web.</p>
+    
+    <div>Click on me</div>
+</body>
+<script>
+    var p2 = document.getElementsByClassName('segundo')[0]
+    var hum = document.getElementById('titulo')
+    var p = document.querySelector('p')
+    var p1 = document.getElementsByTagName('p')[0]
+
+    document.write('<br>' + p1.innerHTML)
+
+    document.getElementsByTagName('p')[0].style.background = 'purple'
+
+    document.getElementById('titulo').style.color = 'yellow'
+
+    document.getElementsByClassName('segundo')[0].style.color = 'cyan'
+
+    document.querySelector('div').style.background = 'lightgreen'
+    document.querySelector('div').style.width = '100px';
+
+    document.getElementsByName('nome')[0].style.outline ='10px solid red'
+
+    p.style.border = '10px solid green'
+
+    hum.innerText = 'Modificando todo o texto HTML no JavaScript'
+    
+</script>
+</html>
