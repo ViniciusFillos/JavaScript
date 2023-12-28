@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 30px;
+            align-items: center;
+            border: 3px solid blueviolet;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            margin-top: 30px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.473);
+            outline: 3px solid black;
+        }
+        h1 {
+            font-family: Arial;
+            text-transform: uppercase;
+            color: blueviolet;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.473);
+        }
+        #numbers {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+        #num1 ,#num2 {
+            border: 2px solid blueviolet;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(221, 200, 240);
+        }
+        #contas {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        input[type='button']{
+            background-color: blueviolet;
+            color: white;
+            padding: 10px;
+            width: 130px;
+            border-radius: 8px;
+        }
+        p {
+            color: blueviolet;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            text-shadow: 1px 1px 2px black;
+        }
+        #res {
+            background-color: blueviolet;
+            height: 100px;
+            width: 400px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            text-transform: uppercase;
+            font-size: 48px;
+            border-top: 3px solid black;
+            font-weight: bolder;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <div id="numbers">
+        <input type="text" name="" id="num1" placeholder="digite um valor">
+        <input type="text" name="" id="num2" placeholder="digite um valor">
+    </div>
+    <div id="contas">
+        <input type="button" value="Soma" id="sum">
+        <input type="button" value="Subtração" id="sub">
+        <input type="button" value="Divisao" id="div">
+        <input type="button" value="Multiplicação" id="mul">
+        <input type="button" value="Exponensiação" id="exp">
+    </div>
+    <p>resultado</p>
+    <div id="res">
+
+    </div>
+    <script>
+        var res;
+        var lbl = document.querySelector('div#res')
+        
+        var sum = document.getElementById('sum')
+        sum.addEventListener('click', soma)
+        function soma() {
+            var num1 = window.document.querySelector('input#num1')
+            var num2 = window.document.querySelector('input#num2')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+
+            res = Number(n1) + Number(n2)
+
+            lbl.innerText = res
+        }
+
+        var sub = document.getElementById('sub')
+        sub.addEventListener('click', subt)
+        function subt() {
+            var num1 = window.document.querySelector('input#num1')
+            var num2 = window.document.querySelector('input#num2')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+
+            res = Number(n1) - Number(n2)
+
+            lbl.innerText = res
+        }
+
+        var sub = document.getElementById('div')
+        div.addEventListener('click', divs)
+        function divs() {
+            var num1 = window.document.querySelector('input#num1')
+            var num2 = window.document.querySelector('input#num2')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+
+            res = Number(n1) / Number(n2)
+
+            lbl.innerText = res
+        }
+
+        var sub = document.getElementById('mul')
+        mul.addEventListener('click', mult)
+        function mult() {
+            var num1 = window.document.querySelector('input#num1')
+            var num2 = window.document.querySelector('input#num2')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+
+            res = Number(n1) * Number(n2)
+
+            lbl.innerText = res
+        }
+
+        var sub = document.getElementById('exp')
+        exp.addEventListener('click', expn)
+        function expn() {
+            var num1 = window.document.querySelector('input#num1')
+            var num2 = window.document.querySelector('input#num2')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+
+            res = Number(n1) ** Number(n2)
+
+            lbl.innerText = res
+        }
+    </script>
+</body>
+</html>
