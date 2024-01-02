@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+:root {
+    --cor01: #6FFFE9;
+    --cor02: #5BC0BE;
+    --cor03: #3A506B;
+    --cor04: #1C2541;
+    --cor05: #0B132B;
+}
+
+body {
+    background-color: var(--cor05);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background-color: var(--cor01);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
