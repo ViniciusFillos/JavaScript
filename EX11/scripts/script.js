@@ -3,7 +3,7 @@ function carregar() {
     var msg = window.document.querySelector('div#msg')
     var img = window.document.getElementById('imagem')
     var DateToday = new Date()
-    var hora = 133//DateToday.getHours()
+    var hora = DateToday.getHours()
     msg.innerHTML = `Agora são ${hora} horas`
 
     if (hora<13) {
