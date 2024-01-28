@@ -23,8 +23,8 @@
         document.write(`<br>In Lowercase is ${name.toLowerCase()} `) // to write the string in lowercase
 
         var real = 123.456 // float variable
-        document.write(`<br><br><br><br><br> Using the command toFixed we can format numbers like ${real.toFixed(2)} or ${real.toFixed(5)}`)
-        document.write(`<br><br> We also can replace dots for commas with .toFixed().replace(".",",") like ${real.toFixed(4).replace(".",",")} `)
+        document.write(`<br><br><br><br><br> Using the command toFixed we can format numbers like ${real.toFixed(2)} or ${real.toFixed(5)}`) // .toFixed(number)
+        document.write(`<br><br> We also can replace dots for commas with .toFixed().replace(".",",") like ${real.toFixed(4).replace(".",",")} `) // .replace(`old`,`new`)
         document.write(`<br><br>To show a value as a currency we can use .toLocaleString('pt-BR', {style: 'currency, currency: 'BRL''}) like ${real.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} or ${real.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})} or ${real.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}`);
     </script>
 </body>
